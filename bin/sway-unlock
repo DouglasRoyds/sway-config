@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+bindir=$(cd "$(dirname "$0")" >/dev/null; pwd)
+
+for script in $(ls $bindir/sway-unlock.d/* 2>/dev/null); do
+   logger -t sway-config $script
+   $script
+done

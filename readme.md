@@ -1,3 +1,8 @@
+Install:
+
+    $ make
+    $ sudo make checkinstall
+
 Symlink config into the expected location:
 
     ln -s ~/workspace/sway-config/config ~/.config/sway/config
