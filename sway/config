@@ -42,9 +42,8 @@ bindsym XF86Forward exec rhythmbox-client --next
 bindsym XF86AudioRaiseVolume exec amixer set Master 3dB+
 bindsym XF86AudioLowerVolume exec amixer set Master 3dB-
 
-# xprop WM_CLASS returns "gcalctool", "Gcalctool" for the calculator.
-# I have to use the capitalised version for this to work.
-for_window [class="Gcalctool"] floating enable
+# From swaymsg -t get_tree | grep app_id
+for_window [app_id="gnome-calculator"] floating enable
 
 # Print screen
 #     I've done it the hard way here, just for fun.
