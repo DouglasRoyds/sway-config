@@ -38,9 +38,8 @@ checkinstall:
 	@echo
 	@echo "Now you should symlink the config files into your home directory:"
 	@echo
-	@echo "   $$ mkdir -p ~/.config/sway ~/.config/i3status"
-	@echo "   $$ ln -s $(pwd)/config ~/.config/sway"
-	@echo "   $$ ln -s ~/my/preferred/wallpaper.jpg ~/.config/sway/wallpaper"
-	@echo "   $$ ln -s $(pwd)/i3status.conf ~/.config/i3status/config"
+	@echo "   $$ ln -s $(pwd)/sway ~/.config"
+	@echo "   $$ ln -s $(pwd)/i3status ~/.config"
+	@echo "   $$ ln -s ~/my/preferred/wallpaper.jpg sway/wallpaper"
 	@echo "   $$ ls -l ~/.config/sway ~/.config/i3status"
 
