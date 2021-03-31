@@ -84,15 +84,12 @@ bar {
 # Screen-lock
 bindsym Control+Mod1+L exec sway-prelock && swaylock -f -c 000000 && sway-unlock
 
-#bindsym $mod+Shift+E exec --no-startup-id i3-prelock; exit
-bindsym --no-warn $mod+Shift+E exec swaynag -t warning \
-                                            -m 'Do you really want to exit sway?' \
-                                            -b 'Yes, exit sway' \
-                                            'swaymsg exit'
+# Exit
+bindsym --no-warn $mod+Shift+E exec --no-startup-id sway-prelock; exit
 
 # ------------------------------------------- Start-up --------------------------------------------------------------
 
-#exec --no-startup-id i3-unlock
+exec --no-startup-id sway-unlock
 #exec --no-startup-id devmon --exec-on-drive 'notify-send \"Mounted %l\"' \
 #                            --ignore-label RECOVERY \
 #                            --ignore-label DellUtility \
