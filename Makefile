@@ -10,7 +10,8 @@ docdir = $(datarootdir)/doc/$(PACKAGE)
 DESTDIR = /
 pwd = $(shell pwd)
 
-executables = bin/sway-prelock \
+executables = bin/i3status-append \
+              bin/sway-prelock \
               bin/sway-unlock
 
 docfiles = $(wildcard *.md)
@@ -35,10 +36,11 @@ install:
 checkinstall:
 	checkinstall --pkgname=$(PACKAGE) --nodoc
 	@echo
-	@echo "Now you should symlink the config file into your home directory:"
+	@echo "Now you should symlink the config files into your home directory:"
 	@echo
-	@echo "   $$ mkdir -p ~/.config/sway"
+	@echo "   $$ mkdir -p ~/.config/sway ~/.config/i3status"
 	@echo "   $$ ln -s $(pwd)/config ~/.config/sway"
 	@echo "   $$ ln -s ~/my/preferred/wallpaper.jpg ~/.config/sway/wallpaper"
-	@echo "   $$ ls -l ~/.config/sway"
+	@echo "   $$ ln -s $(pwd)/i3status.conf ~/.config/i3status/config"
+	@echo "   $$ ls -l ~/.config/sway ~/.config/i3status"
 

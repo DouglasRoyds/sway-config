@@ -1,15 +1,5 @@
 include /etc/sway/config
 
-# Start i3bar
-# See man i3status and ~/.i3status.conf
-# I use my own i3-status-append wrapper-script to prepend or append my own functionality:
-#     https://github.com/DouglasRoyds/utilities_douglas
-# TODO: I don't seem to be able to run i3bar over rdp
-#bar {
-#   status_command i3-status-append
-#   mode hide
-#}
-
 # ------------------------------------------- Monitor layout ------------------------------------------------------
 
 workspace 1 output HDMI-A-1
@@ -81,8 +71,13 @@ workspace_layout tabbed
 bindsym   $mod+semicolon splitv
 bindsym --no-warn $mod+v splith
 
-# Font for window titles. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# Regrettably, I have to delete the bar settings from /etc/sway/config
+# for these settings to be recognised.
+bar {
+   status_command i3status-append
+   position bottom
+   mode hide
+}
 
 # ------------------------------------------- Control ---------------------------------------------------------------
 
