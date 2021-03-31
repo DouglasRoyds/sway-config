@@ -61,7 +61,6 @@ output * bg ~/.config/sway/wallpaper tile
 
 focus_follows_mouse yes
 default_border pixel 1
-workspace_layout tabbed
 
 # Splits
 # I use Vim movement keys, so I've set split horizontal to use semicolon.
