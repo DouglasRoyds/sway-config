@@ -24,7 +24,7 @@ help:
 	@echo
 	@echo -n "   "; echo $(executables) | sed 's# \+#\n   #g'
 	@echo
-	@echo "You will have to manually symlink the config file into ~/.config/sway/"
+	@echo "You will have to manually symlink the config files into ~/.config/sway/"
 
 install:
 	@install -d $(DESTDIR)$(bindir)
@@ -39,5 +39,6 @@ checkinstall:
 	@echo
 	@echo "   $$ mkdir -p ~/.config/sway"
 	@echo "   $$ ln -s $(pwd)/config ~/.config/sway"
+	@echo "   $$ ln -s ~/my/preferred/wallpaper.jpg ~/.config/sway/wallpaper"
 	@echo "   $$ ls -l ~/.config/sway"
 

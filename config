@@ -67,6 +67,8 @@ for_window [class="Gcalctool"] floating enable
 
 # ------------------------------------------- Layout ----------------------------------------------------------------
 
+output * bg ~/.config/sway/wallpaper tile
+
 focus_follows_mouse yes
 default_border pixel 1
 workspace_layout tabbed
