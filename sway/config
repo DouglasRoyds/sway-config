@@ -82,7 +82,7 @@ bar {
 # ------------------------------------------- Control ---------------------------------------------------------------
 
 # Screen-lock
-bindsym Control+Mod1+L exec sway-prelock && swaylock -f -c 000000 && sway-unlock
+bindsym Control+Mod1+L exec sway-prelock && swaylock -c 000000 && sway-unlock
 
 # Exit
 bindsym --no-warn $mod+Shift+E exec --no-startup-id sway-prelock; exit
