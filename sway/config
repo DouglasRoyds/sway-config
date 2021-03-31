@@ -31,9 +31,10 @@ bindsym Control+Mod1+N exec nautilus
 bindsym Control+Mod1+P exec pomodoro
 
 # Special keys
-bindsym XF86HomePage exec firefox
-bindsym XF86Mail exec thunderbird -compose
-bindsym XF86Search exec thunderbird
+set $env_wayland env MOZ_ENABLE_WAYLAND=1
+bindsym XF86HomePage exec $env_wayland firefox
+bindsym XF86Mail exec $env_wayland thunderbird -compose
+bindsym XF86Search exec $env_wayland thunderbird
 bindsym XF86Calculator exec gnome-calculator
 bindsym XF86AudioPlay exec rhythmbox-client --play-pause
 bindsym XF86Back exec rhythmbox-client --previous
