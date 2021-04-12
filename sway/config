@@ -89,8 +89,8 @@ bindsym --no-warn $mod+Shift+E exec --no-startup-id sway-prelock; exit
 # ------------------------------------------- Start-up --------------------------------------------------------------
 
 exec --no-startup-id sway-unlock
-#exec --no-startup-id devmon --exec-on-drive 'notify-send \"Mounted %l\"' \
-#                            --ignore-label RECOVERY \
-#                            --ignore-label DellUtility \
-#                                 2>&1 | logger
-#
+exec --no-startup-id devmon --exec-on-drive 'notify-send \"Mounted %l\"' \
+                            --ignore-label RECOVERY \
+                            --ignore-label DellUtility \
+                                 2>&1 | logger
+
