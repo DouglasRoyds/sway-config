@@ -12,6 +12,7 @@ pwd = $(shell pwd)
 
 executables = bin/i3status-append \
               bin/sway-prelock \
+              bin/sway-session \
               bin/sway-unlock
 
 docfiles = $(wildcard *.md)
