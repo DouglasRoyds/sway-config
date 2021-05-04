@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Sway Douglas
+Comment=sway launched via my own sway-session script
+Exec=sway-session
+Type=Application

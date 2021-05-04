@@ -17,6 +17,9 @@ executables = bin/i3status-append \
 
 docfiles = $(wildcard *.md)
 
+wayland_sessiondir = /usr/share/wayland-sessions
+wayland_session = wayland-sessions/sway-douglas.desktop
+
 help:
 	@echo "An install-only makefile to allow easy running of checkinstall:"
 	@echo
@@ -31,8 +34,10 @@ help:
 install:
 	@install -d $(DESTDIR)$(bindir)
 	@install -d $(DESTDIR)$(docdir)
+	@install -d $(DESTDIR)$(wayland_sessiondir)
 	@install -v -m775 $(executables) $(DESTDIR)$(bindir)
 	@install -v -m664 $(docfiles) $(DESTDIR)$(docdir)
+	@install -v -m644 $(wayland_session) $(DESTDIR)$(wayland_sessiondir)
 
 checkinstall:
 	checkinstall --pkgname=$(PACKAGE) --nodoc
