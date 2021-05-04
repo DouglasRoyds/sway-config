@@ -10,7 +10,9 @@ docdir = $(datarootdir)/doc/$(PACKAGE)
 DESTDIR = /
 pwd = $(shell pwd)
 
-executables = bin/i3status-append \
+executables = bin/current_temperature \
+              bin/current_temperature_from_northcott \
+              bin/i3status-append \
               bin/sway-prelock \
               bin/sway-session \
               bin/sway-unlock
@@ -48,4 +50,10 @@ checkinstall:
 	@echo "   $$ ln -s $(pwd)/i3status ~/.config"
 	@echo "   $$ ln -s ~/my/preferred/wallpaper.jpg sway/wallpaper"
 	@echo "   $$ ls -l ~/.config/sway ~/.config/i3status"
+	@echo
+	@echo "Add the current temperature script to the crontab:"
+	@echo
+	@echo "   $$ crontab -e"
+	@echo "   */15 * * * * /usr/local/bin/current_temperature_from_northcott > ~/.current_temperature"
+
 
